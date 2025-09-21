@@ -4,6 +4,9 @@
   padding: 2rem;
   text-align: center;
   color: #f54646;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+
+
 }
 
 .logo {

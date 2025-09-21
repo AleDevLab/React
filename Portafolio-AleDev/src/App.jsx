@@ -1,6 +1,7 @@
 import MiComponente from './components/MiComponente';
 import Boton from './components/buttons/Boton';
 import Navbar from './components/Navbar';
+import Title from './components/texto/Title';
 import './App.css'
 function App() {
     const manejarClick = () => {
@@ -9,7 +10,14 @@ function App() {
   return (
    <>
       <Navbar />
-      <h1>¡Hola mundo desde React! 😎</h1>
+       <Title
+        headingParts={[
+          { text: "Alejandro Serrano", color: "white" },
+          { text: "Developer", color: "rgb(109, 247, 253)" }
+        ]}
+        paragraph="Bienvenido a mi portafolio de React."
+      />
+
       <MiComponente />
       <Boton texto="Haz clic aquí" onClick={manejarClick} />
     </>

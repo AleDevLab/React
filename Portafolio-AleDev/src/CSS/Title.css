@@ -1,0 +1,10 @@
+.title-container h1 {
+  color: rgb(255, 0, 0); /* Puedes usar RGB, degradados, etc. */
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.title-container p {
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+}

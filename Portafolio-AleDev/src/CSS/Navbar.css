@@ -2,20 +2,18 @@
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  padding: 0.1rem 1.0rem;   /* Más pequeño */
-  background: linear-gradient(90deg, #e74a4a, #fd8a8a);
+  padding: 1.5rem 1.0rem;   /* Más pequeño */
+  background: linear-gradient(90deg, #001d7e, #4896f0);
   color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  max-width: 1280px;        /* Hace el cuadro más angosto */
+  box-shadow: 0 30px 12px rgba(0,0,0,0.2);
+  width: 1200px;        /* Hace el cuadro más angosto */
+  max-height: 400px;       /* Reduce la altura */
   margin: 1rem auto;       /* Centra la navbar horizontalmente */
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+
+
 
 .nav-links {
   list-style: none;
