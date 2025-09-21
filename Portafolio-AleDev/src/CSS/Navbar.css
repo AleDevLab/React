@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0.1rem 1.0rem;   /* Más pequeño */
+  background: linear-gradient(90deg, #e74a4a, #fd8a8a);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 1280px;        /* Hace el cuadro más angosto */
+  margin: 1rem auto;       /* Centra la navbar horizontalmente */
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;   /* Para poder usar el pseudo-elemento debajo */
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+/* Efecto de subrayado deslizante */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;   /* Un poquito debajo del texto */
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdede;
+}
+
+.nav-links a:hover::after {
+  width: 100%;   /* Se desliza de izquierda a derecha */
+}

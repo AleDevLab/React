@@ -1,5 +1,6 @@
 import MiComponente from './components/MiComponente';
 import Boton from './components/buttons/Boton';
+import Navbar from './components/Navbar';
 import './App.css'
 function App() {
     const manejarClick = () => {
@@ -7,6 +8,7 @@ function App() {
   };
   return (
    <>
+      <Navbar />
       <h1>¡Hola mundo desde React! 😎</h1>
       <MiComponente />
       <Boton texto="Haz clic aquí" onClick={manejarClick} />
