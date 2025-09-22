@@ -6,7 +6,10 @@ import Card from './components/interfaz/Card';
 import jsImg from "./assets/js.png";
 import ReaImg from "./assets/react.jpg";
 import pyImg from "./assets/python.png";
+import perfil from "./assets/perfil.png";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import './App.css'
+import './CSS/Contact.css'
 function App() {
     const manejarClick = () => {
     alert('¡Botón presionado! 🚀');
@@ -14,15 +17,35 @@ function App() {
   return (
    <>
       <Navbar />
-       <Title
+      <div className="profile-section">
+      {/* Nombre arriba */}
+      <Title
         headingParts={[
           { text: "Flavio Alejandro Serrano", color: "white" },
-          { text: "Developer", color: "rgb(109, 247, 253)" }
+          { text: " Developer", color: "rgb(109, 247, 253)" }
         ]}
-        paragraph="Bienvenido a mi portafolio de React."
+        paragraph="Desarrollador | Electrónico"
       />
 
-      <div className="cards-container">
+      {/* Contenedor de dos columnas */}
+      <div className="profile-content">
+        {/* Columna izquierda */}
+        <div className="profile-text">
+          <p>
+            Me encanta combinar creatividad y tecnología para dar vida a páginas
+            web elegantes y fáciles de usar. En cada proyecto busco que el diseño
+            cuente una historia y que la experiencia sea clara para el usuario.
+            Mi objetivo es seguir aprendiendo y compartir soluciones digitales
+            que realmente aporten valor.
+          </p>
+        </div>
+
+        {/* Columna derecha */}
+        <div className="profile-wrap">
+          <img src={perfil} alt="Mi foto" className="profile-img" />
+        </div>
+      </div>
+    </div>      <div className="cards-container">
 
       <Card
         title="Programación Web"
@@ -46,6 +69,33 @@ function App() {
 
       <MiComponente />
       <Boton texto="Haz clic aquí" onClick={manejarClick} />
+
+      <div className="contact-bar" id="contacto">
+      <a href="mailto:ale.serranodev@gmail.com" className="contact-item">
+        <FaEnvelope className="contact-icon" />
+        <span>ale.serranodev@gmail.com</span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/flavio-alejandro-serrano-s"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-item"
+      >
+        <FaLinkedin className="contact-icon" />
+        <span>linkedin.com/in/flavio-alejandro-serrano-s</span>
+      </a>
+
+      <a
+        href="https://github.com/AleDevLab"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="contact-item"
+      >
+        <FaGithub className="contact-icon" />
+        <span>github.com/AleDevLab</span>
+      </a>
+    </div>
     </>
   );
 }

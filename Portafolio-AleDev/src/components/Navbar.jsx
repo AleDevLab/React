@@ -6,7 +6,18 @@ export default function Navbar() {
       <>✨ Bienvenidos</>
       <ul className="nav-links">
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Fin</a></li>
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault(); // evita que el navegador haga un salto brusco
+              document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Contacto
+          </a>
+        </li>
+
       </ul>
     </nav>
   );
