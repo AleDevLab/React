@@ -1,10 +1,28 @@
+.title-container {
+  text-align: center;
+}
+
 .title-container h1 {
-  color: rgb(255, 0, 0); /* Puedes usar RGB, degradados, etc. */
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .title-container p {
   color: rgb(255, 255, 255);
   font-size: 1.1rem;
+}
+
+.cursor {
+  margin-left: 2px;
+  color: rgb(255, 255, 255); /* o el color que prefieras */
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
