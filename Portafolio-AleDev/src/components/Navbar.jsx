@@ -5,7 +5,6 @@ export default function Navbar() {
     <nav className="navbar">
       <>✨ Bienvenidos</>
       <ul className="nav-links">
-        <li><a href="#">Inicio</a></li>
         <li>
           <a
             href="#"

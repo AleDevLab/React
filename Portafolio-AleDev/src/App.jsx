@@ -11,8 +11,10 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import './App.css'
 import './CSS/Contact.css'
 function App() {
-    const manejarClick = () => {
-    alert('¡Botón presionado! 🚀');
+  const manejarClick = () => {
+    alert('¡Gracias por visitar mi portafolio! 🚀');
+    // Después de cerrar el alert, movemos al inicio
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
    <>
@@ -45,7 +47,8 @@ function App() {
           <img src={perfil} alt="Mi foto" className="profile-img" />
         </div>
       </div>
-    </div>      <div className="cards-container">
+    </div>      
+    <div className="cards-container">
 
       <Card
         title="Programación Web"
@@ -67,7 +70,6 @@ function App() {
       />
       </div>
 
-      <MiComponente />
       <Boton texto="Haz clic aquí" onClick={manejarClick} />
 
       <div className="contact-bar" id="contacto">
