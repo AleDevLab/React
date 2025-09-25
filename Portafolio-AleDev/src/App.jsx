@@ -7,14 +7,36 @@ import jsImg from "./assets/js.png";
 import ReaImg from "./assets/react.jpg";
 import pyImg from "./assets/python.png";
 import perfil from "./assets/perfil.png";
+import Swal from "sweetalert2";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import './App.css'
 import './CSS/Contact.css'
 function App() {
   const manejarClick = () => {
-    alert('¡Gracias por visitar mi portafolio! 🚀');
-    // Después de cerrar el alert, movemos al inicio
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    let timerInterval;
+    Swal.fire({
+      title: "Espero que te guste mi portafolio",
+      html: "Muchas gracias por visitar mi portafolio.",
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const timer = Swal.getPopup().querySelector("b");
+        timerInterval = setInterval(() => {
+          timer.textContent = `${Swal.getTimerLeft()}`;
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      }
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+    
   };
   return (
    <>
@@ -54,19 +76,16 @@ function App() {
         title="Programación Web"
         content="Proyectos creados con HTML + Javascript + CSS + PHP + Bootstrap 3"
         image={jsImg}
-        link="#"
       />
             <Card
         title="Actualmente estudiando"
         content="Actualmente me encuentro estudiando React, para despues aprender Tailwind y Typescript"
         image={ReaImg}
-        link="#"
       />
       <Card
         title="Otros lenguajes"
         content="Durante mis estudios he aprendido otros lenguajes como java, Python y C++"
         image={pyImg}
-        link="#"
       />
       </div>
 

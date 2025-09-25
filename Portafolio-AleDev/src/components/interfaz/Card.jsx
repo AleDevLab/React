@@ -7,11 +7,6 @@ export default function Card({ title, content, image, link }) {
         {image && <img src={image} alt={title} className="imagen" />}
         <p>{content}</p>
       </div>
-      {link && (
-        <div className="pie">
-          <a href={link}>Más información</a>
-        </div>
-      )}
     </div>
   );
 }
