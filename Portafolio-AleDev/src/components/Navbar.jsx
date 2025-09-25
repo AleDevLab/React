@@ -7,6 +7,20 @@ export default function Navbar() {
       <ul className="nav-links">
         <li>
           <a
+            href="#sobre-mi"
+            onClick={(e) => {
+              e.preventDefault(); // evita que el navegador haga un salto brusco
+              document
+                .getElementById("sobre-mi")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Sobre mí
+          </a>
+        </li>
+
+        <li>
+          <a
             href="#"
             onClick={(e) => {
               e.preventDefault(); // evita que el navegador haga un salto brusco
@@ -16,7 +30,6 @@ export default function Navbar() {
             Contacto
           </a>
         </li>
-
       </ul>
     </nav>
   );

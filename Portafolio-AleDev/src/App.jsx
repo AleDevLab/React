@@ -1,4 +1,4 @@
-import MiComponente from './components/MiComponente';
+import MiComponente from './components/texto/AboutMe';
 import Boton from './components/buttons/Boton';
 import Navbar from './components/Navbar';
 import Title from './components/texto/Title';
@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import './App.css'
 import './CSS/Contact.css'
+import AboutMe from './components/texto/AboutMe';
 function App() {
   const manejarClick = () => {
     let timerInterval;
@@ -89,6 +90,7 @@ function App() {
       />
       </div>
 
+      <AboutMe />
       <Boton texto="Haz clic aquí" onClick={manejarClick} />
 
       <div className="contact-bar" id="contacto">

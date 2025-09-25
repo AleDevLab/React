@@ -19,6 +19,8 @@ body {
   flex-wrap: wrap; /* para que se acomoden en móviles */
   max-width: 1000px;
   margin: 0 auto; /* lo centra horizontalmente */
+  margin-top: 2rem;
+  
 }
 
 /* Contenedor general */
@@ -55,4 +57,27 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   border: 4px solid #fff;
   background-color: rgb(255, 182, 51);
+}
+
+.AboutMe {
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 1000px;
+}
+.AboutMe h1 {
+  color: #ffb633;
+  text-align: center;
+}
+.AboutMe {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);  /* desenfoque de fondo detrás del contenedor */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border-top: 4px solid #ffb633;
 }
