@@ -40,7 +40,7 @@ function App() {
     
   };
   return (
-   <>
+    <>
       <Navbar />
       <div className="profile-section">
       {/* Nombre arriba */}
