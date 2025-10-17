@@ -1,6 +1,6 @@
 import MiComponente from './components/texto/AboutMe';
 import Boton from './components/buttons/Boton';
-import Navbar from './components/Navbar';
+import Navbar from './components/interfaz/Navbar';
 import Title from './components/texto/Title';
 import Card from './components/interfaz/Card';
 import jsImg from "./assets/js.png";
