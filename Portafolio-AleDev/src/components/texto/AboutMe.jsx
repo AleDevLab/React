@@ -1,6 +1,6 @@
 function AboutMe() {
   return (
-     <div className='AboutMe' id='sobre-mi'>
+    <div className='AboutMe' id='sobre-mi'>
           <h1>Sobre mi</h1>
           <h2>Hola, soy Alejandro👋</h2>
           <p>Soy un apasionado del desarrollo web que disfruta aprender, crear y mejorar constantemente.  
@@ -12,7 +12,7 @@ function AboutMe() {
           <p>Soy una persona curiosa, constante y autodidacta. Disfruto mucho resolver problemas a través del código y encontrar nuevas formas de optimizar lo que construyo.  
           Cuando no estoy programando, me gusta explorar nuevas tecnologías, aprender cosas nuevas cada día y buscar inspiración en proyectos de otros desarrolladores. 🌟</p>
           <p>gracias por visitar mi portafolio, ¡espero que te guste lo que he creado hasta ahora! 😊</p>
-      </div>
+    </div>
     );
 }
 export default AboutMe;

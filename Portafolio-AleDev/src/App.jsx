@@ -1,4 +1,3 @@
-import MiComponente from './components/texto/AboutMe';
 import Boton from './components/buttons/Boton';
 import Navbar from './components/interfaz/Navbar';
 import Title from './components/texto/Title';
@@ -8,10 +7,10 @@ import ReaImg from "./assets/react.jpg";
 import pyImg from "./assets/python.png";
 import perfil from "./assets/perfil.png";
 import Swal from "sweetalert2";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import './App.css'
 import './CSS/Contact.css'
 import AboutMe from './components/texto/AboutMe';
+import Foot from './components/interfaz/Foot';
 function App() {
   const manejarClick = () => {
     let timerInterval;
@@ -42,6 +41,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <h1>Hola</h1>
       <div className="profile-section">
       {/* Nombre arriba */}
       <Title
@@ -78,7 +78,7 @@ function App() {
         content="Proyectos creados con HTML + Javascript + CSS + PHP + Bootstrap 3"
         image={jsImg}
       />
-            <Card
+      <Card
         title="Actualmente estudiando"
         content="Actualmente me encuentro estudiando React, para despues aprender Tailwind y Typescript"
         image={ReaImg}
@@ -92,34 +92,9 @@ function App() {
 
       <AboutMe />
       <Boton texto="Haz clic aquí" onClick={manejarClick} />
-
-      <div className="contact-bar" id="contacto">
-      <a href="mailto:ale.serranodev@gmail.com" className="contact-item">
-        <FaEnvelope className="contact-icon" />
-        <span>ale.serranodev@gmail.com</span>
-      </a>
-
-      <a
-        href="https://www.linkedin.com/in/flavio-alejandro-serrano-s"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="contact-item"
-      >
-        <FaLinkedin className="contact-icon" />
-        <span>linkedin.com/in/flavio-alejandro-serrano-s</span>
-      </a>
-
-      <a
-        href="https://github.com/AleDevLab"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="contact-item"
-      >
-        <FaGithub className="contact-icon" />
-        <span>github.com/AleDevLab</span>
-      </a>
-    </div>
+      <Foot />
     </>
+    
   );
 }
 

@@ -1,5 +1,5 @@
 import "../../CSS/Card.css"; // Importamos los estilos
-export default function Card({ title, content, image, link }) {
+export default function Card({ title, content, image}) {
   return (
     <div className="tarjeta">
       <div className="titulo">{title}</div>
